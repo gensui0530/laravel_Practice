@@ -1946,9 +1946,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["title", "drill", "categoryName"],
+  props: ["title", "drill", "category_name"],
   data: function data() {
     return {
       countDownNum: 3,
@@ -37696,10 +37705,16 @@ var render = function() {
       _c("div", { staticClass: "col-md-8" }, [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
-            _vm._v("\n          " + _vm._s(_vm.title) + "\n          "),
+            _vm._v(
+              "\n                    " +
+                _vm._s(_vm.title) +
+                "\n                    "
+            ),
             _c("span", { staticClass: "badge badge-success" }, [
               _vm._v(
-                "\n            " + _vm._s(_vm.categoryName) + "\n          "
+                "\n                        " +
+                  _vm._s(_vm.category_name) +
+                  "\n                    "
               )
             ])
           ]),
@@ -37715,13 +37730,21 @@ var render = function() {
                       staticClass: "btn btn-primary",
                       on: { click: _vm.doDrill }
                     },
-                    [_vm._v("START")]
+                    [
+                      _vm._v(
+                        "\n                        START\n                    "
+                      )
+                    ]
                   )
                 : _vm._e(),
               _vm._v(" "),
               _vm.isCountDown
                 ? _c("p", { staticStyle: { "font-size": "100px" } }, [
-                    _vm._v(_vm._s(_vm.countDownNum))
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(_vm.countDownNum) +
+                        "\n                    "
+                    )
                   ])
                 : _vm._e(),
               _vm._v(" "),
@@ -37733,7 +37756,9 @@ var render = function() {
                       return _c(
                         "span",
                         {
-                          class: { "text-primary": index < _vm.currentWordNum }
+                          class: {
+                            "text-primary": index < _vm.currentWordNum
+                          }
                         },
                         [_vm._v(_vm._s(word))]
                       )
